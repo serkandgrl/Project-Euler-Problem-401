@@ -1,0 +1,15 @@
+function e_401(){ 
+var i=nbv(1),j,k,s=nbv(0),is,ks,
+l=new BigInteger("1000000000000000",10),
+m=new BigInteger("1000000000",10),
+sq0=nbv(0),sq1,two=nbv(2),six=nbv(6);
+while(true){
+j=l.divide(i),k=l.divide(j);
+is=k,k=k.add(BigInteger.ONE);
+ks=is.multiply(two).add(BigInteger.ONE);
+sq1=is.multiply(k).multiply(ks).divide(six);
+s=s.add(sq1.subtract(sq0).multiply(j)).mod(m);
+if(i.compareTo(l)==1) return s;
+i=k;sq0=sq1;
+}
+} 
